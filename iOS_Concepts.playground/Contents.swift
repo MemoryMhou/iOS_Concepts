@@ -29,15 +29,16 @@ let numbers = [1, 2, 3, 4, 5, 6]
 // 4. write a basic function for a calculator were you specify the operation and two numbers, add , subtract , multiply and divide
 
 func calculator (a: Int, b: Int , operation: String) -> Int {
-    if operation == "+" {
+    switch operation {
+    case "+":
         return a+b
-    } else if operation == "-" {
+    case "-":
         return a-b
-    } else if operation == "*" {
+    case "*":
         return a*b
-    } else if operation == "/" {
+    case "/":
         return a/b
-    } else {
+    default: 
         return 0
     }
 }
