@@ -38,9 +38,36 @@ func calculator (a: Int, b: Int , operation: String) -> Int {
         return a*b
     case "/":
         return a/b
-    default: 
+    default:
         return 0
     }
 }
 print(calculator(a: 30, b: 6, operation: ";"))
 
+
+
+
+
+// MARK: Create functions with default parameters and variadic parameters.
+func displayInfo(name: String = "Guest", age: Int = 25, hobbies: String...) {
+    print("Name: \(name)")
+    print("Age: \(age)")
+    
+    if hobbies.isEmpty {
+        print("No hobbies specified.")
+    } else {
+        print("Hobbies:")
+        for hobby in hobbies {
+            print("- \(hobby)")
+        }
+    }
+}
+
+//Using Default Parameters
+displayInfo()
+
+// Providing Some Information
+displayInfo(name: "John", age: 30)
+
+// Providing All Information
+displayInfo(name: "Alice", age: 28, hobbies: "Reading", "Painting")
