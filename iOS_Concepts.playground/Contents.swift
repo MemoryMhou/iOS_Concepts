@@ -1,6 +1,5 @@
 import Foundation
 
-// generic function with contraints
 
 func compare<T>(a: T, b: T) where T: Equatable & CustomStringConvertible{
     if a == b {
@@ -10,5 +9,6 @@ func compare<T>(a: T, b: T) where T: Equatable & CustomStringConvertible{
     }
 }
 
-compare(a: "Hello", b: "World")
+
+compare(a: "cake", b: "banana")
 compare(a: "chicken", b: "chicken")
