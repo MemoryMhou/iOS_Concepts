@@ -1,14 +1,13 @@
 import Foundation
 
-
-func compare<T>(a: T, b: T) where T: Equatable & CustomStringConvertible{
-    if a == b {
-        print("\(a) is equal to \(b)")
-    } else {
-        print("\(a) is not equal to \(b)")
-    }
+// generic function with numeric type constraint
+func sum<T: Numeric>(a: T, b: T) -> T {
+    return a + b
 }
+let result = sum(a: 8, b: 3)
+print(result)
+
+print(sum(a: 2, b: 5))
 
 
-compare(a: "cake", b: "banana")
-compare(a: "chicken", b: "chicken")
+
