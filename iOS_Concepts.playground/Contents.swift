@@ -27,6 +27,6 @@ class House: Houses {
 
 let myhouse = House(numberOfRooms: 3, location: "makoni", bedrooms: 14, bathrooms: 2)
 
-print(myhouse)
+print(myhouse.numberOfRooms)
 
 
