@@ -1,13 +1,16 @@
-import UIKit
+import Foundation
 
-
-class StandardCalculatorView {
-    func displayResult(result: Int) {
-        print("Result: \(result)")
-    }
+class StandardCalculatorController {
+    var model = StandardCalculatorModel()
+    var view = StandardCalculatorView()
     
-    func displayError() {
-        print("math error")
+    func calculate(a: Int, b: Int, operation: String) {
+        if operation == "/" && b == 0 {
+            view.displayError()
+        } else {
+            let result = model.calculate(a: a, b: b, operation: operation)
+            view.displayResult(result: result)
+        }
     }
 }
 
