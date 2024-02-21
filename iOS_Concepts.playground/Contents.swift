@@ -1,3 +1,13 @@
 import UIKit
 
-var greeting = "Hello, playground"
+
+class StandardCalculatorView {
+    func displayResult(result: Int) {
+        print("Result: \(result)")
+    }
+    
+    func displayError() {
+        print("math error")
+    }
+}
+
