@@ -2,7 +2,7 @@ import Foundation
 // Define and implement basic protocols.
 
 //defining the protocol for family
-protocol family{
+protocol Family{
     var name: String { get}
     var age: Int { get}
     
@@ -10,7 +10,7 @@ protocol family{
 }
 
 //implementing the protocol for mother
-struct mother: family {
+struct Mother: Family {
     let name: String
     let age: Int
     
@@ -24,7 +24,7 @@ struct mother: family {
             }
  
 //implementing the protocol for  child
-struct child: family {
+struct Child: Family {
     let name: String
     let age: Int
     
@@ -38,8 +38,8 @@ struct child: family {
 }
 
 
-let Memory = mother(name: "mother", age: 41)
-let Courteny = child(name: "firstBorn", age: 4)
+let memory = Mother(name: "mother", age: 41)
+let courteny = Child(name: "firstBorn", age: 4)
 
-Memory.introduce()
-Courteny.introduce()
+memory.introduce()
+courteny.introduce()
